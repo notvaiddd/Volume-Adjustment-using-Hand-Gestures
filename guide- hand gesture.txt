@@ -1,0 +1,25 @@
+Logic:
+
+The program captures real-time video using OpenCV and processes each frame with Mediapipe to detect hand landmarks.
+It identifies the positions of the thumb tip (landmark 4) and index finger tip (landmark 8).
+Volume Control:
+
+The Euclidean distance between the thumb and index finger is calculated, and this distance is mapped to a range of system volume levels using the pycaw library.
+The closer the fingers, the lower the volume; the farther they are apart, the higher the volume.
+Feedback:
+
+Visual feedback is provided by drawing circles on the detected thumb and index finger, along with a line connecting them.
+The current volume level is displayed on the screen in percentage form.
+Control:
+
+The system volume is updated in real time, based on the gesture distance, using pycaw.
+
+
+
+
+Tech Stack:
+
+Python: Core programming language.
+Mediapipe: For hand gesture recognition.
+OpenCV: For real-time video capture and image processing.
+pycaw: For controlling system volume.
